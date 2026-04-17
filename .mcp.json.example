@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    },
+
+    "_chrome-devtools-headless": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest", "--headless", "--slim"]
+    },
+
+    "_jira-example": {
+      "command": "npx",
+      "args": ["-y", "@atlassian/mcp-server-jira"],
+      "env": {
+        "JIRA_BASE_URL": "https://your-company.atlassian.net",
+        "JIRA_EMAIL": "you@example.com",
+        "JIRA_API_TOKEN": "replace-me"
+      }
+    },
+
+    "_testcollab-example": {
+      "command": "npx",
+      "args": ["-y", "@testcollab/mcp-server"],
+      "env": {
+        "TESTCOLLAB_BASE_URL": "https://your-testcollab.example.com",
+        "TESTCOLLAB_API_KEY": "replace-me"
+      }
+    },
+
+    "_slack-example": {
+      "command": "npx",
+      "args": ["-y", "@slack/mcp-server"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-replace-me",
+        "SLACK_TEAM_ID": "T00000000"
+      }
+    }
+  }
+}
